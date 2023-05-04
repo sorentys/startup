@@ -2,7 +2,7 @@
 
 ## Links
 
-[Startup README.md] (https://github.com/sorentys/startup/blob/main/README.md)
+[Startup README.md](https://github.com/sorentys/startup/blob/main/README.md)
 
 ## EC2 Notes
 
