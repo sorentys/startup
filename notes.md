@@ -1,5 +1,9 @@
 # This is my cs 260 notes page
 
+## Links
+
+[Startup README.md] (https://github.com/sorentys/startup/blob/main/README.md)
+
 ## EC2 Notes
 
 ### My public IP address:
