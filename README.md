@@ -8,7 +8,7 @@ Where can organizations find and application to organize their conferences? Many
 
 ### Design
 
-![Design Image](Design.png)
+![Design Image](/startup/Design.png)
 
 *Picture*
 
