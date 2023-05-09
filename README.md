@@ -39,23 +39,23 @@ Conference Scheduler will use the following:
 
 Conference Scheduler will use the following HTML format:
 
-+ **HTML Pages:**
-+ **Links:**
-+ **Text:**
-+ **Images:**
-+ **Login:**
-+ **Database:** 
-+ **WebSocket**
++ **HTML Pages:** One page to provide login and conference creation. A second page to edit and display meeting and attendee details.
++ **Links:** The login and conference page will directly lead to the meeting details page. The meeting page will link to meeting and attendee details on the same page.
++ **Text:** Meeting and attendee information will be displayed in text.
++ **Images:** Each meeting detail view will have an alloted space to provide an image.
++ **Login:** A username and password input box and input box to create a user account.
++ **Database:** Meeting details and attendee submission information represents data stored in the database.
++ **WebSocket:** Meeting details and attendee submission lists represent realtime updates.
 
 ### CSS Deliverable
 
 Conference Scheduler will apply the following CSS features:
 
 + **Header, Footer, and Main Content Body**
-+ **Navigation Elements:**
-+ **Window Re-sizing:**
-+ **Application Elements:**
-+ **Application Images:**
++ **Navigation Elements:** The meetings detail view includes scroll tabs and lines to separate meetings and meeting detail views.
++ **Window Re-sizing:** Conference Scheduler will resize to any window size.
++ **Application Elements:** Window coloring and simple intuitive meeting view user interface. 
++ **Application Images:** Each meeting detail will placed space for an image.
 
 ### Javascript Deliverable
 
