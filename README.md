@@ -10,8 +10,6 @@ Where can organizations find and application to organize their conferences? Many
 
 ![Design Image](Design.png)
 
-*Picture*
-
 Use notability to make backend diagram here:
 
 *Picture*
