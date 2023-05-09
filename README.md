@@ -20,25 +20,51 @@ See specification github
 
 ### Technologies
 
-Put list of technologies here:
+Conference Scheduler will use the following:
 
-+ **HTML** 
-+ **CSS**
-+ **HTML**
-+ **Service**
-    + additional items
-    +
-    +
-+ **DB**
-+ **Login**
-+ **Websocket**
-+ **React**
++ **HTML:** Implements Two pages. One page is and welcome page to sign in or create an account and create a conference. The second page is for creating conference events and viewing event details.
++ **CSS:** Adjust application page to different window sizes, customize webpage color, and edit line design. 
++ **Javascript:** Supports a login and account feature, meeting pages, apply meeting detail edits, and attendee submissions.
++ **Service:**
+    + Login
+    + Accept meeting and conference detail edits
+    + Broadcast meeting and conference detail information to attendees
+    + Accept Attendee submissions
++ **DB:** Store administrator, attendees, and meeting and conference details in a database.
++ **Login:** Allow users to make an Conference Scheduler account. Ensure security and safety of account information and provides user authentication.
++ **Websocket:** Will broadcast meeting information to all Conference Scheduler users and update meeting attendee list in real time.
++ **React:** Will take advantage of React web framework.
 
 ### HTML Deliverable
 
+Conference Scheduler will use the following HTML format:
+
++ **HTML Pages:**
++ **Links:**
++ **Text:**
++ **Images:**
++ **Login:**
++ **Database:** 
++ **WebSocket**
+
 ### CSS Deliverable
 
+Conference Scheduler will apply the following CSS features:
+
++ **Header, Footer, and Main Content Body**
++ **Navigation Elements:**
++ **Window Re-sizing:**
++ **Application Elements:**
++ **Application Images:**
+
 ### Javascript Deliverable
+
+Conference Scheduler will use Javascript primarily to provide manipulation and creation of meeting and conference details.
+
++ **Login:**
++ **Database**
++ **WebSocket:**
++ **Application Logic:**
 
 ### Service Deliverable
 
