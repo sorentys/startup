@@ -75,3 +75,9 @@ Conference Scheduler will use Javascript primarily to provide manipulation and c
 ### Websocket Deliverable
 
 ### React Deliverable
+
+### References
+
+The following README is structured after a Startup deliverable GitHub page:
+
+[Startup Specification](https://github.com/webprogramming260/.github/blob/main/profile/essentials/startupSpec/startupSpec.md)
