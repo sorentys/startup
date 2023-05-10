@@ -16,7 +16,12 @@ Use notability to make backend diagram here:
 
 ### Key Features
 
-See specification github
++ Secure login page
++ Creation of meetings
++ Ability to create, edit, and administrate meeting details
++ Display of attendees
++ Real time updates of attendee information and meeting details
+
 
 ### Technologies
 
@@ -61,22 +66,59 @@ Conference Scheduler will apply the following CSS features:
 
 Conference Scheduler will use Javascript primarily to provide manipulation and creation of meeting and conference details.
 
-+ **Login:**
-+ **Database**
-+ **WebSocket:**
-+ **Application Logic:**
++ **Login:** Entering the correct user account information and pressing login button change the webpage to the meeting or conference detail view.
++ **Database:** Meeting and attendee submission details are stored in a database I hope will be via the cloud. Right now my database is local.
++ **WebSocket:** I will use a function to update the meeting details and attendee list each minute.
++ **Application Logic:** The color of the meeting tab will change in the meetings scroll bar based on what meeting is selected.
 
 ### Service Deliverable
 
+Conference Scheduler will apply its services in the following ways:
+
++ **Node.js/Express HTTP Service:** I have het to complete this task.
++ **Static Middleware for Frontend:** I have also not yet completed this task.
++ **Calls to Third Party Endpoints:** I will study this service ensure I use it correctly.
++ **Backend Service Endpoints:** I will apply this later in the course.
++ **Frontend Calls to Service Endpoints:** I will apply this later in the course.
+
 ### DB Deliverable
+
+Conference Scheduler will use a certain database to store and broadcast data, most likely MongoDB.
+
++ **Create MongoDB Atlas Database:** Unfinished.
++ **Endpoints for Data:** Unfinished.
++ **Store data with MongoDB:** Unfinished.
 
 ### Login Deliverable
 
+Conference Scheduler will include the following login features:
+
++ **Account Registration:** Allow creation and storage of new user credentials in the database.
++ **Existing User Authentication:** Verifies correct user account credentials before use can access conference and meeting administration.
++ **Restrictions:** Attendees cannot edit meetings without administrator authorization.
+
 ### Websocket Deliverable
+
+Conference Scheduler will update meeting and attendee details by implementing the following process:
+
++ **Backend Communicates with WebSocket Connection:** Unfinished.
++ **Frontend end connects with WebSocket:** Unfinished.
++ **WebSocket Allows for Data Transaction:** Unfinished.
++ **Data from WebSocket is Displayed in Conference Scheduler:** Unfinished.
 
 ### React Deliverable
 
+Conference Scheduler implements React in the following ways:
+
++ **Bundle and Transpile:** Unfinished.
++ **Components:** Login, Meeting details, attendee information.
++ **Router:** Transportation from login page to meeting detail page.
++ **Hooks:** Unfinished. 
 ### References
+
+See the following link to my GitHub for this project:
+
+[Conference Scheduler](https://github.com/sorentys/startup)
 
 The following README is structured after a Startup deliverable GitHub page:
 
