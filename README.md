@@ -45,12 +45,12 @@ Conference Scheduler will use the following:
 Conference Scheduler will use the following HTML format:
 
 + **HTML Pages:** One page to provide login and conference creation. A second page to edit and display meeting and attendee details.
-+ **Links:** The login and conference page will directly lead to the meeting details page. The meeting page will link to meeting and attendee details on the same page.
++ **Links:** The login and conference page will directly lead to the meeting details page (still in progress). The meeting page will link to meeting and attendee details on the same page.
 + **Text:** Meeting and attendee information will be displayed in text.
-+ **Images:** Each meeting detail view will have an alloted space to provide an image.
++ **Images:** Each meeting detail view will have an alloted space to provide an image (still in progress).
 + **Login:** A username and password input box and input box to create a user account.
-+ **Database:** Meeting details and attendee submission information represents data stored in the database.
-+ **WebSocket:** Meeting details and attendee submission lists represent realtime updates.
++ **Database:** Meeting details and attendee submission information represents data stored in the database (still in progress).
++ **WebSocket:** Meeting details and attendee submission lists represent realtime updates (still in progress).
 
 ### CSS Deliverable
 
