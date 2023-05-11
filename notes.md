@@ -40,3 +40,18 @@ press esc key and then :wq to save and exit
 * git commit (use -am "*text*")
 * git push
 
+## HTML
+
+### Simon-startup deploy site:
+
+https://simon.cs260tysoren.link
+
+### Conference Scheduler deploy site:
+
+https://startup.cs260tysoren.link
+
+### deploy command format:
+
+cd [folder to deploy]
+./deployFiles.sh -k [key file path] -h [domain_name] -s [name you want for https link]
+
