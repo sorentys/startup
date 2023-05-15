@@ -40,7 +40,7 @@ Conference Scheduler will use the following:
 + **Websocket:** Will broadcast meeting information to all Conference Scheduler users and update meeting attendee list in real time.
 + **React:** Will take advantage of React web framework.
 
-### HTML Deliverable
+### HTML Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-html))
 
 Conference Scheduler will use the following HTML format:
 
