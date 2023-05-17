@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-    color:rgb(255, 255, 255)
+    color:rgb(255, 255, 255);
 }
 
 main {
@@ -23,6 +23,6 @@ ul {
 }
 
 .list {
-    padding: 10%;
+    padding: 5%;
     line-height: 3em;
 }
