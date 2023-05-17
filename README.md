@@ -40,7 +40,7 @@ Conference Scheduler will use the following:
 + **Websocket:** Will broadcast meeting information to all Conference Scheduler users and update meeting attendee list in real time.
 + **React:** Will take advantage of React web framework.
 
-### HTML Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-html))
+### HTML Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-html-css))
 
 Conference Scheduler will use the following HTML format:
 
@@ -52,12 +52,12 @@ Conference Scheduler will use the following HTML format:
 + **Database:** Meeting details and attendee submission information represents data stored in the database (still in progress).
 + **WebSocket:** Meeting details and attendee submission lists represent realtime updates (still in progress).
 
-### CSS Deliverable
+### CSS Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-html-css))
 
 Conference Scheduler will apply the following CSS features:
 
 + **Header, Footer, and Main Content Body**
-+ **Navigation Elements:** The meetings detail view includes scroll tabs and lines to separate meetings and meeting detail views.
++ **Navigation Elements:** The meetings detail view includes tabs and lines to separate meetings and meeting detail views.
 + **Window Re-sizing:** Conference Scheduler will resize to any window size.
 + **Application Elements:** Window coloring and simple intuitive meeting view user interface. 
 + **Application Images:** Each meeting detail will placed space for an image.
