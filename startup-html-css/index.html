@@ -7,6 +7,8 @@
         <title>Conference Scheduler</title>
         <!-- add css -->
         <link rel="stylesheet" href="main.css" />
+        <!-- add javascript -->
+        <script src="login.js"></script>
         <!-- add bootstrap -->
         <link 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
@@ -45,7 +47,7 @@
                 <form method="get" action="meetings.html">
                     <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username"/>
                     <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password"/>
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary" onclick="login()">Login</button>
                 </form>
             </div>
         </main>
