@@ -32,3 +32,9 @@ ul {
     --bs-btn-font-size: 1.2rem;
 }
 
+.accordion_textarea {
+    width: 340px;
+    height: 100px;
+  }
+  
+
