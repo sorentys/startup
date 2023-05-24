@@ -28,6 +28,9 @@
                 <!-- most websites use ul -->
                 <ul class="navbar-nav flex-row flex-wrap">
                     <li class="nav-item">
+                        <p class="navlink p-2" id="username">Welcome</p>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link p-2" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
@@ -41,14 +44,15 @@
         </header>
         <main>
             <div>
-                <h1>Please Select a Event:</h1>
-                <div class="list">
-                    <ul class="text-center">
+                <h1>Please Create or Select an Event:</h1>
+                <div class="new_meeting_input">
+                    <input type="text" id="meeting_name" class="form-field" placeholder="Create a New Meeting"/>
+                    <button type="submit" class="btn btn-primary" onclick="newMeeting()">Submit</button>
+                </div>
+                <div class="meetings_div">
+                    <ul class="text-center" id="meetings_list">
                         <li class="list-group-item">
                             <a class="btn btn-outline-light" href="meeting1_view.html">Science Lecture</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a class="btn btn-outline-light" href="meeting2_view.html">Master's Lunch</a>
                         </li>
                     </ul>
                 </div>
@@ -57,8 +61,10 @@
         <footer class="text-light">
             <div class="container-fluid">
                 <span class="text-reset">Ty Sorensen</span>
-                <a class="text-reset" href="https://github.com/sorentys/startup"">GitHub</a>
+                <a class="text-reset" href="https://github.com/sorentys/startup">GitHub</a>
             </div>
         </footer>
     </body>
+    <!-- add javascript -->
+    <script src="meetings.js"></script>
 </html>
