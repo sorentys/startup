@@ -40,7 +40,7 @@ Conference Scheduler will use the following:
 + **Websocket:** Will broadcast meeting information to all Conference Scheduler users and update meeting attendee list in real time.
 + **React:** Will take advantage of React web framework.
 
-### HTML Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-html-css))
+### HTML Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-html-css-javascript))
 
 Conference Scheduler will use the following HTML format:
 
@@ -52,7 +52,7 @@ Conference Scheduler will use the following HTML format:
 + **Database:** Meeting details and attendee submission information represents data stored in the database (still in progress).
 + **WebSocket:** Meeting details and attendee submission lists represent realtime updates (still in progress).
 
-### CSS Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-html-css))
+### CSS Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-html-css-javascript))
 
 Conference Scheduler will apply the following CSS features:
 
@@ -62,14 +62,14 @@ Conference Scheduler will apply the following CSS features:
 + **Application Elements:** Window coloring and simple intuitive meeting view user interface. 
 + **Application Images:** Each meeting detail will placed space for an image.
 
-### Javascript Deliverable
+### Javascript Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-html-css-javascript))
 
 Conference Scheduler will use Javascript primarily to provide manipulation and creation of meeting and conference details.
 
-+ **Login:** Entering the correct user account information and pressing login button change the webpage to the meeting or conference detail view.
++ **Login:** Entering the correct user account information and pressing login button change the webpage to the meeting or conference detail view. Username will be displayed on top navigation bar.
 + **Database:** Meeting and attendee submission details are stored in a database I hope will be via the cloud. Right now my database is local.
-+ **WebSocket:** I will use a function to update the meeting details and attendee list each minute.
-+ **Application Logic:** The color of the meeting tab will change in the meetings scroll bar based on what meeting is selected.
++ **WebSocket:** I will use a function to update the meeting details and attendee list each minute. (In progress, to be continued with websocket)
++ **Application Logic:** The color of the meeting tab will change in the meetings list based when the meeting is created. (In progress, with react possibly)
 
 ### Service Deliverable
 
