@@ -1,0 +1,50 @@
+body {
+    color:blueviolet;
+}
+
+h1 {
+    color:rgb(255, 255, 255);
+}
+
+main {
+    flex: 1 calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color:white;
+}
+
+ul {
+    flex: 1;
+    display: flex;
+    /*  overwrite Bootstrap so the ul does not wrap */
+    flex-direction: column !important;
+    list-style: none;
+}
+
+.list {
+    padding: 10%;
+    line-height: 3em;
+}
+
+.btn {
+    --bs-btn-font-size: 1.2rem;
+}
+
+.accordion_textarea {
+    width: 340px;
+    height: 75px;
+  }
+  
+
+.include-detail {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+
+.event-paragraph {
+    width: 350px
+}
+
