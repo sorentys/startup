@@ -35,3 +35,8 @@ function saveLocation() {
 }
 
 //real time update to attendees?
+
+//have an event listener for all three boxes
+//back stroke 
+
+//property on button to enable and backstroke to unenable

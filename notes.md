@@ -55,3 +55,37 @@ https://startup.cs260tysoren.link
 cd [folder to deploy]
 ./deployFiles.sh -k [key file path] -h [domain_name] -s [name you want for https link]
 
+### Cs 260 midterm review
+
+Dns of subdomain
+
+- Primary: what we buy (.edu)
+- Root domain: what release (buy.edu)
+- Subdomain: references to daomin (simon.byu.edu, startup.byu.edu, etc)
+
+- Review what DNS is
+
+What is the Dom tectcontent property do
+
+- Sets the child text for the an element
+
+Promises and awaits on the test, do the kahoot again!!!
+
+
+- Padding in general: puts space around content of selected element
+- Div: division element
+- Read the question: css box model: pals before marriage (in going out)
+- Review regex
+- Go back and check the one that adds an event listener to mouse over on just one p element not all
+- Javascript function, = never goes before () and {}
+- <javascript></javascript> is wrong
+- Javascript object = {n:1} just remember the :
+- DOM textContent = Sets the child text for the an element
+- How to turn only header class blue in css: div.header { color: blue; }
+- JSON: {“x”:1}, no undefined but there is null
+- What console command makes a script executable chmod +x deploy.sh
+- To point to another DNS record, us CNAME
+- Review this question: burger fries taco shake noodles
+- Review ADB question
+- @import url(“url)
+
