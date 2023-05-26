@@ -26,7 +26,7 @@ body {
     flex: 1;
     display: flex;
     /*  overwrite Bootstrap so the ul does not wrap */
-    flex-direction: row !important;
+    flex-direction: column;
     list-style: none;
   }
   

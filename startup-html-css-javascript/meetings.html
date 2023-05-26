@@ -7,7 +7,7 @@
         <title>Conference Scheduler</title>
         <!-- add css -->
         <link rel="stylesheet" href="main.css"/>
-        <link rel="stylesheet" href="meeting_view.css"/>
+        <link rel="stylesheet" href="meetings.css"/>
         <!-- add bootstrap -->
         <link 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
@@ -44,12 +44,12 @@
         </header>
         <!-- create service to make new meetings -->
         <main>
-            <div class="container-fluid text-center">
+            <div class="input-container text-center">
                 <h1>Please Create or Select an Event:</h1>
                 <input type="text" id="meeting_name" class="form-field" placeholder="Create a New Meeting"/>
                 <button type="submit" class="btn btn-primary" onclick="newMeeting()" id="meeting_button">Submit</button>
                 <div class="meetings-container">
-                    <ul id="meetings_list">
+                    <ul class="meetings-list" id="meetings_list">
                         <li class="meeting-item"></li>
                     </ul>
                 </div>
