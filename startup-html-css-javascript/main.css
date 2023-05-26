@@ -45,6 +45,12 @@ body {
     float: right;
   }
   
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+
   @media (max-height: 600px) {
     header {
       display: none;
