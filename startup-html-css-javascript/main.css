@@ -1,7 +1,6 @@
 body {
     display: flex;
     flex-direction: column;
-    min-width: 375px;
 }
   
   header {
@@ -21,7 +20,6 @@ body {
   footer {
     flex: 0 30px;
     background-color:rgb(169, 147, 214);
-
   }
   
   ul {

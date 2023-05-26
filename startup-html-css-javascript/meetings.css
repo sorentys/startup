@@ -14,13 +14,5 @@ main {
     justify-content: space-around;
 }
 
-ul {
-    display: flex;
-    /*  overwrite Bootstrap so the ul does not wrap */
-    flex-direction: column !important;
-    align-items: center;
-}
-
-
 
 

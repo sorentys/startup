@@ -17,7 +17,7 @@ function newMeeting() {
 
     //create a new button with the meeting_name as the name
     const newButton = document.createElement("li");
-    newButton.classList.add("list-group-item");
+    newButton.classList.add("meeting-item");
 
     //add content to button
     newButton.innerHTML=`<a class="btn btn-outline-light" href="meeting_view_template.html">${localStorage.getItem("meeting_name")}</a>`;

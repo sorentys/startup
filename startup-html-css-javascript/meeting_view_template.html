@@ -44,12 +44,12 @@
         </header>
         <main>
           <!-- main content of event details stored here -->
-            <div class="accordionTemplate">
+            <div class="accordion-template">
                 <div class="accordion" id="accordionExample">
                   <!-- Event Description -->
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <button id="button_description" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Event Description
                       </button>
                     </h2>
@@ -58,7 +58,6 @@
                       <div class="accordion-body">
                         <div class="include-detail">
                           <p class="event-paragraph"><strong>Please include your event description here:</strong></p>
-                          <button type="submit" class="btn btn-primary" style="height: 40px" onclick="saveDescription()">Save</button>
                         </div>
                         <textarea class="accordion_textarea" id="event-description"></textarea>
                       </div>
@@ -85,7 +84,7 @@
                   <!-- Event Time and Location -->
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <button id="button_time_location" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Time and Location
                       </button>
                     </h2>
@@ -93,28 +92,29 @@
                       <!-- update event time here-->
                       <div class="accordion-body">
                         <div class="include-detail">
-                          <p class="event-paragraph"><strong>Please include your event time here:</strong></p>
-                          <button type="submit" class="btn btn-primary" style="height: 40px" onclick="saveTime()">Save</button>
+                          <p class="event-paragraph"><strong>Please include your event time and location here:</strong></p>
                         </div>
-                        <textarea class="accordion_textarea" id="event-time"></textarea>
-                        <!-- update event location here -->
-                        <div class="include-detail">
-                          <p class="event-paragraph"><strong>Please include your event location here:</strong></p>
-                          <button type="submit" class="btn btn-primary" style="height: 40px" onclick="saveLocation()">Save</button>
-                        </div>
-                        <textarea class="accordion_textarea" id="event-location"></textarea>
+                        <textarea class="accordion_textarea" id="event-time-location"></textarea>
                       </div>
                     </div>
                   </div>
                 </div>
             </div>
             <!-- allow user to upload image here -->
-            <img src="https://brightspotcdn.byu.edu/dims4/default/4284914/2147483647/strip/true/crop/1519x1139+206+0/resize/400x300!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2Ff2%2F2a%2F48bedd8247469c5d7d141a1f0ba1%2Fwsc-cougar-creations.png" alt="BYU Baseball" width="250" height="250">
+            <div class="image-container">
+              <img src="https://brightspotcdn.byu.edu/dims4/default/4284914/2147483647/strip/true/crop/1519x1139+206+0/resize/400x300!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2Ff2%2F2a%2F48bedd8247469c5d7d141a1f0ba1%2Fwsc-cougar-creations.png" alt="BYU Baseball" width="250" height="250">
+            </div>
             <!-- button to return back to events here -->
-            <h3>Using the following like to return the meetings home page:</h3>
-            <a class="btn btn-outline-light" href="meetings.html">
+            <div class="save-container" id="save-container">
+              <h5>Please fill in the required fields and save your event information:</h5>
+              <button id="save_button" type="submit" class="btn btn-primary" onclick="saveInformation()">Save</button>
+            </div>
+            <div class="return-container">
+              <h5>Using the following like to return the meetings home page:</h5>
+              <a class="btn btn-outline-light" href="meetings.html">
                 Events
-            </a>
+              </a>
+            </div>
         </main>
         <!-- footer includes github and my name -->
         <footer class="text-light">
