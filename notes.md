@@ -101,4 +101,10 @@ Remember the following:
 6. Use the code the package provides in your JavaScript
 7. Run your code with node index.js
 
+### UI testing
+
+ In your project directory, use NPM to download the playwright packages, install the browser drivers, configure your project, and create a couple example test files:
+
++ npm init playwright@latest
+
 
