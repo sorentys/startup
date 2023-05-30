@@ -1,0 +1,28 @@
+body {
+    color:blueviolet;
+}
+
+h1 {
+    color:rgb(255, 255, 255);
+}
+
+main {
+    flex: 1 calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.meetings-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.meeting-item {
+    margin: 5px;
+}
+
+
