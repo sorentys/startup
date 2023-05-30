@@ -89,3 +89,16 @@ Promises and awaits on the test, do the kahoot again!!!
 - Review ADB question
 - @import url(“url)
 
+### Node.js
+
+Remember the following:
+
+1. Create your project directory
+2. Initialize it for use with NPM by running npm init -y
+3. Make sure .gitignore file contains node-modules
+4. Install any desired packages with npm install <package name here>
+5. Add require('<package name here>') to your application's JavaScript
+6. Use the code the package provides in your JavaScript
+7. Run your code with node index.js
+
+
