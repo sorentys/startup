@@ -23,8 +23,6 @@ function saveInformation() {
     localStorage.setItem("event_location", document.getElementById("event-time-location").value);
 }
 
-
-
 //have an event listener for information input in description, time, and location
 document.getElementById("event-time-location").addEventListener("keypress", timeEventColor);
 document.getElementById("event-description").addEventListener("click", descriptionColor);
@@ -43,7 +41,6 @@ function descriptionColor() {
 
 //add event listener for when saved
 document.getElementById("save_button").addEventListener("click", saveAlert);
-
 
 function saveAlert() {
     //change color of save div border
