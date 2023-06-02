@@ -21,3 +21,11 @@ main {
     background-color: white;
     width: 90%;
 }
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(244, 150, 166);
+}
+
