@@ -9,3 +9,4 @@ function login() {
     //add where button should lead to
     window.location.href = "meetings.html";
 }
+
