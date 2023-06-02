@@ -77,7 +77,7 @@ Conference Scheduler will apply its services in the following ways:
 
 + **Node.js/Express HTTP Service:** Conference scheduler uses express and node.js to communicate between frontend and backend process using fetch.
 + **Static Middleware for Frontend:** Express and node.js provide static middleware initiation for the frontend.
-+ **Calls to Third Party Endpoints:** Conference schedule fetches to an online source to provide an quote on the about page.
++ **Calls to Third Party Endpoints:** Conference schedule fetches to an online source to provide a quote on the about page.
 + **Backend Service Endpoints:** Conference scheduler uses fetch to store meeting details and information in a backend array of objects.
 + **Frontend Calls to Service Endpoints:** Conference scheduler calls to the backend array to grab information about meetings and meeting details using fetch.
 
