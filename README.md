@@ -40,7 +40,7 @@ Conference Scheduler will use the following:
 + **Websocket:** Will broadcast meeting information to all Conference Scheduler users and update meeting attendee list in real time.
 + **React:** Will take advantage of React web framework.
 
-### HTML Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-html-css-javascript))
+### HTML Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-service))
 
 Conference Scheduler will use the following HTML format:
 
@@ -52,7 +52,7 @@ Conference Scheduler will use the following HTML format:
 + **Database:** Meeting details and attendee submission information represents data stored in the database (still in progress).
 + **WebSocket:** Meeting details and attendee submission lists represent realtime updates (still in progress).
 
-### CSS Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-html-css-javascript))
+### CSS Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-service))
 
 Conference Scheduler will apply the following CSS features:
 
@@ -62,7 +62,7 @@ Conference Scheduler will apply the following CSS features:
 + **Application Elements:** Window coloring and simple intuitive meeting view user interface. 
 + **Application Images:** Each meeting detail will placed space for an image.
 
-### Javascript Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-html-css-javascript))
+### Javascript Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-service))
 
 Conference Scheduler will use Javascript primarily to provide manipulation and creation of meeting and conference details.
 
@@ -71,13 +71,13 @@ Conference Scheduler will use Javascript primarily to provide manipulation and c
 + **WebSocket:** I will use a function to update the meeting details and attendee list each minute. (In progress, to be continued with websocket)
 + **Application Logic:** The color of the meeting tab will change in the meetings list based when the meeting is created. (In progress, with react possibly)
 
-### Service Deliverable
+### Service Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-service))
 
 Conference Scheduler will apply its services in the following ways:
 
 + **Node.js/Express HTTP Service:** Conference scheduler uses express and node.js to communicate between frontend and backend process using fetch.
 + **Static Middleware for Frontend:** Express and node.js provide static middleware initiation for the frontend.
-+ **Calls to Third Party Endpoints:** Conference schedule fetches to an online source to provide an image in the about page.
++ **Calls to Third Party Endpoints:** Conference schedule fetches to an online source to provide an quote on the about page.
 + **Backend Service Endpoints:** Conference scheduler uses fetch to store meeting details and information in a backend array of objects.
 + **Frontend Calls to Service Endpoints:** Conference scheduler calls to the backend array to grab information about meetings and meeting details using fetch.
 
