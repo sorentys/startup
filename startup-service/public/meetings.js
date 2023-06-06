@@ -14,15 +14,20 @@ async function loadEvents() {
   
         // Save the events in case we go offline in the future
         localStorage.setItem('events', JSON.stringify(events));
-    } catch {
+    } 
+    catch {
         // store locally
-        localStorage.setItem("events", events);
+        const eventsText = localStorage.getItem('events');
+        if (eventsText) {
+            events = JSON.parse(eventsText);
+        }
     }
     //call displayEvents
     displayEvents(events);
 }
-  
-  function displayEvents(events) {
+
+//display events on meetings page
+function displayEvents(events) {
     if (events.length) {
         // Update the DOM with the events
         for (const [i, event] of events.entries()) {
@@ -31,7 +36,7 @@ async function loadEvents() {
             newButton.classList.add("meeting-item");
 
             //add content to button
-            newButton.innerHTML=`<a class="btn btn-outline-light" onclick="pressButton(this)">${event.name}</a>`;
+            newButton.innerHTML=`<a class="btn btn-outline-light" id="${event._id}" onclick="pressMeeting(this)">${event.name}</a>`;
 
             //push to meetings.html
             document.getElementById("meetings_list").appendChild(newButton);
@@ -39,31 +44,12 @@ async function loadEvents() {
     }
 }
 
-//create pressButton function to grab event name
-async function pressButton(event) {
-    //state variables
-    let current_event = event.innerText;
-    let current_name = {current_event_name: current_event};
+function pressMeeting(event) {
+    //grab meeting _id
+    let desired_event = event.id;
 
-    try {
-        //post events
-        const response = await fetch('/api/current_event', {
-        method: 'POST',
-        headers: {'content-type': 'application/json'},
-        body: JSON.stringify(current_name),
-        });
-
-        // Store events from service
-        let event_name_list = await response.json();
-        localStorage.setItem('current_events', JSON.stringify(event_name_list));
-        console.log(localStorage.getItem("current_events"));
-    }
-    catch {
-        //store locally
-        localStorage.setItem("current_event", current_event);
-    } 
-    //try
-    window.location.href = "meeting_view_template.html";
+    //send user to meeting view page
+    window.location.href = "meeting_view_template.html?id=" + desired_event;
 }
 
 //show username on website and event already created
@@ -86,7 +72,7 @@ async function newMeeting() {
 
     try {
         //post events
-        const response = await fetch('/api/events', {
+        const response = await fetch('/api/event', {
         method: 'POST',
         headers: {'content-type': 'application/json'},
         body: JSON.stringify(newEvent),

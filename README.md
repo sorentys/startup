@@ -85,9 +85,9 @@ Conference Scheduler will apply its services in the following ways:
 
 Conference Scheduler will use a certain database to store and broadcast data, most likely MongoDB.
 
-+ **Create MongoDB Atlas Database:** Unfinished.
-+ **Endpoints for Data:** Unfinished.
-+ **Store data with MongoDB:** Unfinished.
++ **Create MongoDB Atlas Database:** Conference scheduler will use MongoDB Atlas to store and access data.
++ **Endpoints for Data:** Conference scheduler will use endpoints to send data from mongoDB via its backend to the frontend server.
++ **Store data with MongoDB:** Conference scheduler will post and put new data or updated event information to the MongoDB database.
 
 ### Login Deliverable
 

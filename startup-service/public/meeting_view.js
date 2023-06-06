@@ -1,3 +1,4 @@
+/*--- general setup ----*/
 //function to grab username
 function getUserName() {
     //return username id
@@ -49,88 +50,87 @@ async function newAttendee() {
 
 
 //function to save event information
-async function saveInformation() {
-    events = [];
-    current_event = [];
+async function loadEventDetails() {
+    let event;
     //grab the event description and time/location and store it
     let event_description = document.getElementById("event-description").value;
     let event_time_location = document.getElementById("event-time-location").value;
 
-    //request event and current event
+    //grab id from url
+    const query_string = window.location.search;
+    const urlParams =  new URLSearchParams(query_string);
+    id = urlParams.get('id');
+
+    //request event
     try {
-        const response = await fetch('/api/events');
-        events = await response.json();
-        const response_2 = await fetch('/api/current_event');
-        current_event = await response_2.json();
+        const response = await fetch('/api/event/' + id);
+        event = await response.json();
 
-        localStorage.setItem('events', JSON.stringify(events));
-        localStorage.setItem('current_event', JSON.stringify(current_event));
-
+        //store locally
+        localStorage.setItem('event', JSON.stringify(event));
+        
+        //load in details
+        event_description = event.description;
+        event_time_location = event.time_and_location;
     }
     catch {
         //local storage
-        localStorage.setItem("current_event", localStorage.getItem("event_name"));
+        localStorage.setItem("event", id);
         localStorage.setItem("event_description", document.getElementById("event-description").value);
         localStorage.setItem("event_location", document.getElementById("event-time-location").value);
     }
 
-    //loop through and find the right event
-    for (const [i, event] of events.entries()) {
-        if (current_event == event.name) {
-            event.description = event_description;
-            events.time_and_location = event_time_location;
-        }
-        
-        console.log(events);
-    }
 }
-/*
-//function got get events
-async function loadEventDetails() {
-    let events = [];
+    //save information
+async function saveInformation() {
+    let event;
+    //grab the event description and time/location and store it
+    let event_description = document.getElementById("event-description").value;
+    let event_time_location = document.getElementById("event-time-location").value;
+
+    //grab id from url
+    const query_string = window.location.search;
+    const urlParams =  new URLSearchParams(query_string);
+    id = urlParams.get('id');
+
+    //request event
     try {
-        // Get events from service
-        const response = await fetch('/api/events');
-        events = await response.json();
-  
-        // Save the scores in case we go offline in the future
-        localStorage.setItem('events', JSON.stringify(events));
-    } catch {
-        // If there was an error then just use the last saved scores
-        localStorage.setItem("current_event", current_event);
+        const response = await fetch('/api/event/' + id);
+        event = await response.json();
     }
-    //call displayEvents
-    displayEventDetails(events);
+    catch {
+        //local storage
+        localStorage.setItem("event", id);
+    }
 
+    event.description = event_description;
+    event.time_and_location = event_time_location;
+
+    try {
+        const response_2 = await fetch('api/event', {
+            method: 'PUT',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify(event),
+        });
+
+        // Store events from service
+        const event = await response_2.json();
+        localStorage.setItem('event', JSON.stringify(event));
+    }
+    catch {
+        localStorage.setItem("event_description", document.getElementById("event-description").value);
+        localStorage.setItem("event_location", document.getElementById("event-time-location").value);
+    }
+
+    console.log(event);
 }
 
-async function displayEventDetails(events) {
-    if (events.length) {
 
-        //grab current event
-        const response = await fetch('/api/current_event');
-        const current_event = await response.json();
-
-        // Update the DOM with the scores
-        for (const [i, event] of events.entries()) {
-            //match event name to right information
-            if (current_event = event.name) {
-                //set event description
-            document.getElementById("event-description").value = event.description;
-
-            //set event location and time
-            document.getElementById("event-time-location").value = event.time_and_location;
-            }
-            
-        }
-    }
-}
-*/
 //show username on website and event already created
 window.onload = function() {
     //when the document is finished loading, replace everything with username id with username value
     document.getElementById("username").innerHTML = getUserName();
 
     //display events
-    //loadEventDetails();
+    loadEventDetails();
 }
