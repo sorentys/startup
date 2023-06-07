@@ -55,7 +55,6 @@ async function newAttendee() {
     
         // Store events from service
         const updated_event = await response.json();
-        console.log(updated_event.attendees);
         localStorage.setItem('event', JSON.stringify(updated_event));
 
     }
@@ -92,7 +91,6 @@ async function loadEventDetails() {
     try {
         const response = await fetch('/api/event/' + id);
         load_event = await response.json();
-        console.log(load_event.description);
 
         //load in details
         event_description.textContent = load_event.description;
@@ -101,7 +99,6 @@ async function loadEventDetails() {
         //load in attendees
         const attendees = load_event.attendees;
         for (attendee in attendees) {
-            console.log(attendees[attendee]);
             //create a new button with the meeting_name as the name
             const newItem = document.createElement("li");
             newItem.classList.add("attendee_list");
