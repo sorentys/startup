@@ -47,7 +47,7 @@ apiRouter.get('/event/:id', async (req, res) => {
 
 apiRouter.put('/event', async (req, res) => {
   const event = await DB.updateEvent(req.body);
-  res.send(event);
+  res.send(req.body);
 })
 
 

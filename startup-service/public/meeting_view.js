@@ -51,10 +51,10 @@ async function newAttendee() {
 
 //function to save event information
 async function loadEventDetails() {
-    let event;
+    let load_event;
     //grab the event description and time/location and store it
-    let event_description = document.getElementById("event-description").value;
-    let event_time_location = document.getElementById("event-time-location").value;
+    let event_description = document.getElementById("event-description");
+    let event_time_location = document.getElementById("event-time-location");
 
     //grab id from url
     const query_string = window.location.search;
@@ -64,14 +64,15 @@ async function loadEventDetails() {
     //request event
     try {
         const response = await fetch('/api/event/' + id);
-        event = await response.json();
+        load_event = await response.json();
+        console.log(load_event.description);
+
+        //load in details
+        event_description.textContent = load_event.description;
+        event_time_location.textContent = load_event.time_and_location;
 
         //store locally
-        localStorage.setItem('event', JSON.stringify(event));
-        
-        //load in details
-        event_description = event.description;
-        event_time_location = event.time_and_location;
+        localStorage.setItem('event', JSON.stringify(load_event));
     }
     catch {
         //local storage
@@ -83,46 +84,32 @@ async function loadEventDetails() {
 }
     //save information
 async function saveInformation() {
-    let event;
+    let updated_event = localStorage.getItem("event");
+    updated_event = JSON.parse(updated_event);
+
     //grab the event description and time/location and store it
     let event_description = document.getElementById("event-description").value;
     let event_time_location = document.getElementById("event-time-location").value;
 
-    //grab id from url
-    const query_string = window.location.search;
-    const urlParams =  new URLSearchParams(query_string);
-    id = urlParams.get('id');
-
-    //request event
-    try {
-        const response = await fetch('/api/event/' + id);
-        event = await response.json();
-    }
-    catch {
-        //local storage
-        localStorage.setItem("event", id);
-    }
-
-    event.description = event_description;
-    event.time_and_location = event_time_location;
+    updated_event.description = event_description;
+    updated_event.time_and_location = event_time_location;
 
     try {
-        const response_2 = await fetch('api/event', {
+        const response = await fetch('api/event', {
             method: 'PUT',
             headers: {'content-type': 'application/json'},
-            body: JSON.stringify(event),
+            body: JSON.stringify(updated_event),
         });
 
         // Store events from service
-        const event = await response_2.json();
-        localStorage.setItem('event', JSON.stringify(event));
+        const new_event = await response.json();
+        localStorage.setItem('event', JSON.stringify(new_event));
     }
-    catch {
+    catch(error) {
+        console.log(error);
         localStorage.setItem("event_description", document.getElementById("event-description").value);
         localStorage.setItem("event_location", document.getElementById("event-time-location").value);
     }
-
-    console.log(event);
 }
 
 
