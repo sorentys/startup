@@ -5,22 +5,6 @@ function getUserName() {
     return "Welcome " + localStorage.getItem("username") ?? "User";
 }
 
-//have an event listener for information input in description, time, and location
-document.getElementById("event-time-location").addEventListener("keypress", timeEventColor);
-document.getElementById("event-description").addEventListener("click", descriptionColor);
-
-//function to change color of accordion titles
-function timeEventColor() {
-    //grab text to change color and change color
-    document.getElementById("button_time_location").style.color = "black";
-}
-
-//function to change color of accordion titles
-function descriptionColor() {
-    //grab text to change color and change color
-    document.getElementById("button_description").style.color = "black";
-}
-
 //add event listener for when saved
 document.getElementById("save_button").addEventListener("click", saveAlert);
 
@@ -56,7 +40,6 @@ async function newAttendee() {
         // Store events from service
         const updated_event = await response.json();
         localStorage.setItem('event', JSON.stringify(updated_event));
-
     }
     catch {
         //store locally
@@ -92,9 +75,14 @@ async function loadEventDetails() {
         const response = await fetch('/api/event/' + id);
         load_event = await response.json();
 
+        //change accordion name
+        accordion_name = document.getElementById("button_description");
+        accordion_name.textContent = load_event.name;
+
         //load in details
         event_description.textContent = load_event.description;
         event_time_location.textContent = load_event.time_and_location;
+        
 
         //load in attendees
         const attendees = load_event.attendees;
@@ -119,9 +107,9 @@ async function loadEventDetails() {
         localStorage.setItem("event_description", document.getElementById("event-description").value);
         localStorage.setItem("event_location", document.getElementById("event-time-location").value);
     }
-
 }
-    //save information
+
+//save information
 async function saveInformation() {
     let updated_event = localStorage.getItem("event");
     updated_event = JSON.parse(updated_event);
