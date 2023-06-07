@@ -30,7 +30,7 @@ function getEvents() {
 async function updateEvent(event) {
   const result = await eventCollection.updateOne(
     { _id : new ObjectId(event._id) },
-    { $set : { description : event.description, time_and_location : event.time_and_location } }
+    { $set : { description : event.description, time_and_location : event.time_and_location, attendees : event.attendees } }
   );
 }
 

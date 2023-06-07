@@ -34,15 +34,42 @@ function saveAlert() {
 
 //function to create bullet point for new attendees
 async function newAttendee() {
-    //grab attendee name
-    localStorage.setItem("attendee_name", document.getElementById("attendee-name").value);
+    //grab event and turn into object
+    this_event = localStorage.getItem("event");
+    this_event = JSON.parse(this_event);
+
+    //grab attendee
+    attendee = document.getElementById("attendee-name").value;
+
+    //push attendee to event attendee list
+    attendee_list = this_event.attendees;
+    attendee_list.push(attendee);
+
+    try {
+        //post events
+        const response = await fetch('/api/event', {
+        method: 'PUT',
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify(this_event),
+        });
+    
+        // Store events from service
+        const updated_event = await response.json();
+        console.log(updated_event.attendees);
+        localStorage.setItem('event', JSON.stringify(updated_event));
+
+    }
+    catch {
+        //store locally
+        localStorage.setItem("attendee_name", document.getElementById("attendee-name").value);
+    }
 
     //create a new button with the meeting_name as the name
     const newItem = document.createElement("li");
     newItem.classList.add("attendee_list");
 
     //add content to button
-    newItem.innerHTML=`<li>${localStorage.getItem("attendee_name")}</li>`;
+    newItem.innerHTML=`<li>${attendee}</li>`;
 
     //push to meetings.html
     document.getElementById("attendee_list").appendChild(newItem);
@@ -70,6 +97,21 @@ async function loadEventDetails() {
         //load in details
         event_description.textContent = load_event.description;
         event_time_location.textContent = load_event.time_and_location;
+
+        //load in attendees
+        const attendees = load_event.attendees;
+        for (attendee in attendees) {
+            console.log(attendees[attendee]);
+            //create a new button with the meeting_name as the name
+            const newItem = document.createElement("li");
+            newItem.classList.add("attendee_list");
+
+            //add content to button
+            newItem.innerHTML=`<li>${attendees[attendee]}</li>`;
+
+            //push to meetings.html
+            document.getElementById("attendee_list").appendChild(newItem);
+        }
 
         //store locally
         localStorage.setItem('event', JSON.stringify(load_event));
