@@ -1,7 +1,6 @@
 function login() {
     //store username and password
     localStorage.setItem("username", document.getElementById("username").value)
-    localStorage.setItem("password", document.getElementById("password").value)
     
     //log get item
     console.log(localStorage.getItem("username"))
