@@ -93,10 +93,10 @@ Conference Scheduler will use a certain database to store and broadcast data, mo
 
 Conference Scheduler will include the following login features:
 
-+ **Account Registration:** Allow creation and storage of new user credentials in the database.
++ **Account Registration:** Allow creation and storage of new user credentials in MongoDB database.
 + **Returning users**: Conference Scheduler lets users return to their meetings pages after verifying their credentials.
 + **Existing User Authentication:** Verifies correct user account credentials before use can access conference and meeting administration.
-+ **Restrictions:** Attendees cannot edit meetings without administrator authorization.
++ **Restrictions:** Attendees cannot access meetings without credential authentication and authorization.
 
 ### Websocket Deliverable
 
