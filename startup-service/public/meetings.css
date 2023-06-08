@@ -23,6 +23,12 @@ main {
 
 .meeting-item {
     margin: 5px;
+    width: 100%;
 }
+
+.btn.btn-outline-light {
+    width: 100%;
+}
+
 
 
