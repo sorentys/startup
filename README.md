@@ -89,11 +89,12 @@ Conference Scheduler will use a certain database to store and broadcast data, mo
 + **Endpoints for Data:** Conference scheduler will use endpoints to send data from mongoDB via its backend to the frontend server.
 + **Store data with MongoDB:** Conference scheduler will post and put new data or updated event information to the MongoDB database.
 
-### Login Deliverable
+### Login Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-service))
 
 Conference Scheduler will include the following login features:
 
 + **Account Registration:** Allow creation and storage of new user credentials in the database.
++ **Returning users**: Conference Scheduler lets users return to their meetings pages after verifying their credentials.
 + **Existing User Authentication:** Verifies correct user account credentials before use can access conference and meeting administration.
 + **Restrictions:** Attendees cannot edit meetings without administrator authorization.
 
