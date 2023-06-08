@@ -1,4 +1,4 @@
-# Startup-HTML
+# Startup-service
 
 This folder contains the html make up of Conference Scheduler.
 
