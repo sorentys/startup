@@ -18,7 +18,7 @@ This folder contains the html make up of Conference Scheduler.
 + [meeting_view.css](meeting_view.css) - styling for meeting detail page
 + [about.css](about.css) - styling for information page
 
-### Conference Scheduler includes the following javascript file:
+### Conference Scheduler includes the following Javascript file:
 
 + [login.js](login.js) - adds functionality to login page to store username and password
 + [meetings.js](meetings.js) - stores meeting information and adds functionality to buttons
