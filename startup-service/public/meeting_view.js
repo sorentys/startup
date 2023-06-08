@@ -77,7 +77,7 @@ async function loadEventDetails() {
 
         //change accordion name
         accordion_name = document.getElementById("button_description");
-        accordion_name.textContent = load_event.name;
+        accordion_name.textContent = "Event: " + load_event.name;
 
         //load in details
         event_description.textContent = load_event.description;

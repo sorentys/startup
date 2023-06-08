@@ -48,18 +48,33 @@ img {
     padding: 10px;
 }
 
-#button_time_location {
-    color: black;
-}
-
-#button_chat {
-    color: black;
-}
-
 #button_description {
     color: blueviolet;
 }
 
-.accordion-template {
-    margin: 15px;
+.accordion-holder {
+    margin: 15px;;
+    width: 50%
+}
+
+textarea {
+    width: 100%;
+}
+
+input {
+    width: 60%;
+}
+
+.input-and-submit {
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 100%;
+
+}
+
+.accordion-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
