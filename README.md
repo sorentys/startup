@@ -98,14 +98,14 @@ Conference Scheduler will include the following login features:
 + **Existing User Authentication:** Verifies correct user account credentials before use can access conference and meeting administration.
 + **Restrictions:** Attendees cannot access meetings without credential authentication and authorization.
 
-### Websocket Deliverable
+### Websocket Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-service))
 
 Conference Scheduler will update meeting and attendee details by implementing the following process:
 
-+ **Backend Communicates with WebSocket Connection:** Unfinished.
-+ **Frontend end connects with WebSocket:** Unfinished.
-+ **WebSocket Allows for Data Transaction:** Unfinished.
-+ **Data from WebSocket is Displayed in Conference Scheduler:** Unfinished.
++ **Backend Communicates with WebSocket Connection:** Conference Scheduler's backend receives frontend calls to websocket to retrieve and send data to other users on the same event page.
++ **Frontend end connects with WebSocket:** Conference scheduler is displays comments made from other users by retrieving information from backend endpoints.
++ **WebSocket Allows for Data Transaction:** Conference scheduler transfers comment data to each user on the same event page.
++ **Data from WebSocket is Displayed in Conference Scheduler:** Comment from any user on the same event page can be seen on the event's live chat tab.
 
 ### React Deliverable
 
