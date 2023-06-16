@@ -30,7 +30,7 @@ Conference Scheduler will use the following:
 + **HTML:** Implements Two pages. One page is and welcome page to sign in or create an account and create a conference. The second page is for creating conference events and viewing event details.
 + **CSS:** Adjust application page to different window sizes, customize webpage color, and edit line design. 
 + **Javascript:** Supports a login and account feature, meeting pages, apply meeting detail edits, and attendee submissions.
-+ **Service:**
++ **react:**
     + Login
     + Accept meeting and conference detail edits
     + Broadcast meeting and conference detail information to attendees
@@ -40,7 +40,7 @@ Conference Scheduler will use the following:
 + **Websocket:** Will broadcast meeting information to all Conference Scheduler users and update meeting attendee list in real time.
 + **React:** Will take advantage of React web framework.
 
-### HTML Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-service))
+### HTML Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-react))
 
 Conference Scheduler will use the following HTML format:
 
@@ -52,7 +52,7 @@ Conference Scheduler will use the following HTML format:
 + **Database:** Meeting details and attendee submission information represents data stored in the database (still in progress).
 + **WebSocket:** Meeting details and attendee submission lists represent realtime updates (still in progress).
 
-### CSS Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-service))
+### CSS Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-react))
 
 Conference Scheduler will apply the following CSS features:
 
@@ -62,7 +62,7 @@ Conference Scheduler will apply the following CSS features:
 + **Application Elements:** Window coloring and simple intuitive meeting view user interface. 
 + **Application Images:** Each meeting detail will placed space for an image.
 
-### Javascript Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-service))
+### Javascript Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-react))
 
 Conference Scheduler will use Javascript primarily to provide manipulation and creation of meeting and conference details.
 
@@ -71,17 +71,17 @@ Conference Scheduler will use Javascript primarily to provide manipulation and c
 + **WebSocket:** I will use a function to update the meeting details and attendee list each minute. (In progress, to be continued with websocket)
 + **Application Logic:** The color of the meeting tab will change in the meetings list based when the meeting is created. (In progress, with react possibly)
 
-### Service Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-service))
+### react Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-react))
 
-Conference Scheduler will apply its services in the following ways:
+Conference Scheduler will apply its reacts in the following ways:
 
-+ **Node.js/Express HTTP Service:** Conference scheduler uses express and node.js to communicate between frontend and backend process using fetch.
++ **Node.js/Express HTTP react:** Conference scheduler uses express and node.js to communicate between frontend and backend process using fetch.
 + **Static Middleware for Frontend:** Express and node.js provide static middleware initiation for the frontend.
 + **Calls to Third Party Endpoints:** Conference schedule fetches to an online source to provide a quote on the about page.
-+ **Backend Service Endpoints:** Conference scheduler uses fetch to store meeting details and information in a backend array of objects.
-+ **Frontend Calls to Service Endpoints:** Conference scheduler calls to the backend array to grab information about meetings and meeting details using fetch.
++ **Backend react Endpoints:** Conference scheduler uses fetch to store meeting details and information in a backend array of objects.
++ **Frontend Calls to react Endpoints:** Conference scheduler calls to the backend array to grab information about meetings and meeting details using fetch.
 
-### DB Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-service))
+### DB Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-react))
 
 Conference Scheduler will use a certain database to store and broadcast data, most likely MongoDB.
 
@@ -89,7 +89,7 @@ Conference Scheduler will use a certain database to store and broadcast data, mo
 + **Endpoints for Data:** Conference scheduler will use endpoints to send data from mongoDB via its backend to the frontend server.
 + **Store data with MongoDB:** Conference scheduler will post and put new data or updated event information to the MongoDB database.
 
-### Login Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-service))
+### Login Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-react))
 
 Conference Scheduler will include the following login features:
 
@@ -98,7 +98,7 @@ Conference Scheduler will include the following login features:
 + **Existing User Authentication:** Verifies correct user account credentials before use can access conference and meeting administration.
 + **Restrictions:** Attendees cannot access meetings without credential authentication and authorization.
 
-### Websocket Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-service))
+### Websocket Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-react))
 
 Conference Scheduler will update meeting and attendee details by implementing the following process:
 
@@ -107,14 +107,14 @@ Conference Scheduler will update meeting and attendee details by implementing th
 + **WebSocket Allows for Data Transaction:** Conference scheduler transfers comment data to each user on the same event page.
 + **Data from WebSocket is Displayed in Conference Scheduler:** Comment from any user on the same event page can be seen on the event's live chat tab.
 
-### React Deliverable
+### React Deliverable ([code](https://github.com/sorentys/startup/tree/main/startup-react))
 
 Conference Scheduler implements React in the following ways:
 
-+ **Bundle and Transpile:** Unfinished.
-+ **Components:** Login, Meeting details, attendee information.
-+ **Router:** Transportation from login page to meeting detail page.
-+ **Hooks:** Unfinished. 
++ **Bundle and Transpile:** Conference Scheduler is bundled using Vite.
++ **Components:** Login, about, and meeting pages use React components to load pages, authorize accounts, and generate content.
++ **Router:** Conference scheduler uses router in its app.jsx file to route between components of the website.
++ **Hooks:** Conference scheduler uses hooks to define the initial and updated state of user login values, about page quotes, and meeting details.
 ### References
 
 See the following link to my GitHub for this project:
