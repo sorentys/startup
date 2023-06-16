@@ -3,7 +3,6 @@ import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { Login } from "./login/login"
 import { About } from "./about/about"
 import { Meetings } from "./meetings/meetings"
-import { MeetingView } from "./meeting_view/meeting_view"
 import { AuthState } from './login/auth_state';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
@@ -53,7 +52,6 @@ function App() {
                     exact
                 />
                 <Route path='/meetings' element={<Meetings />} />
-                <Route path='/meeting_view' element={<MeetingView />} />
                 <Route path='/about' element={<About />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>

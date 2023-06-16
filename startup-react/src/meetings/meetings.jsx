@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Link, Route } from "react-router-dom";
 import Accordion from 'react-bootstrap/Accordion';
-import { sendMessage } from "./chat_client"
 import './meetings.css';
 
 let events_list =[];
@@ -109,7 +108,7 @@ export function Meetings() {
                     <fieldset id="chat-controls">
                         <h6 className="event-paragraph">Comments</h6>
                         <input id="new-msg" type="text" />
-                        <button className="btn btn-primary" onClick={sendMessage}>Send</button>
+                        <button className="btn btn-primary">Send</button>
                     </fieldset>
                   </div>
                   </Accordion.Body>
@@ -121,7 +120,7 @@ export function Meetings() {
 }
 
   return (
-    <main>
+    <main className="main">
       <div className="input-container text-center">
         <h1>Please Create or Select an Event:</h1>
           <input 
