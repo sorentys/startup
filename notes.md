@@ -106,5 +106,74 @@ Remember the following:
  In your project directory, use NPM to download the playwright packages, install the browser drivers, configure your project, and create a couple example test files:
 
 + npm init playwright@latest
++ 
+
+# Final Study GUide
+
+## Questions
+
+### what is port 80 for?
+
+HTTP (not secure)
+
+### HTTP status codes in the 300 range for?
+
+Content redirects or caching
+
+### Which is NOT a standard HTTP header?
+
+Language
+
+### Cookies allow:
+
+server to store data on client
+
+### For the request [Get]/fav/george, what is logged?
+
+paul george john (read whole script)
+
+### Which express middleware will march this fetch request?
+
+app.delete(/fav\/(.*)/,() ={}) whaaaaa??
+
+### What document matches this mongodb query?
+
+{name: "Walke", score; -55} only one that matched the params
+
+### Why is hasing stored passwords important?
+
+It improves security by making the password unreadable
+
+### Given the following code what will console.log print?
+
+Client:Server:Hello
+
+### What value does Websocket add to HTTP?
+
+Its a peer to peer instead of client to server
+
+### What is NOT the purpose of JSX?
+
+To combine CSS, HTML, and Javascript
+
+### What will component A initially display?
+
+tacofish
+
+### What component wil the URL `/burger` render?
+
+B
+
+### What does the command "NPM install ws" NOT do?
+
+Adds template code of websockets to your Javascript
+
+### You can use fetch in front-end and back-end code:
+
+True
+
+### Which of the following is NOT true about Linux daemon?
+
+Cannot fork other processes (it actually can)
 
 
