@@ -108,7 +108,7 @@ Remember the following:
 + npm init playwright@latest
 + 
 
-# Final Study GUide
+# Final Study Guide
 
 ## Questions
 
